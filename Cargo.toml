@@ -1,0 +1,19 @@
+[package]
+name = "lever-runner-carapace"
+version = "0.1.0"
+edition = "2021"
+description = "Native performance layer for lever-runner — BLAKE2b hashing, position-aware embedding, cosine search, three-gate pipeline"
+license = "MIT"
+
+[dependencies]
+blake2 = "0.10"
+serde = { version = "1", features = ["derive"] }
+serde_yaml = "0.9"
+
+[dev-dependencies]
+criterion = { version = "0.5", features = ["html_reports"] }
+rand = "0.8"
+
+[[bench]]
+name = "bench"
+harness = false
